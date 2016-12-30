@@ -1,0 +1,32 @@
+body {
+  background-color:#1393D1;
+}
+
+#app {
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color:#E9EAED;
+  text-align: center;
+}
+
+#quoteButton {
+  background-color: #56BC8A;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+#quoteText {
+  font-weight: bold;
+  font-size: 60px;
+}
+
+#quoteButton {
+  margin-top: 20px;
+}
+
+#quoteBox {
+  margin-top: 50px;
+}
