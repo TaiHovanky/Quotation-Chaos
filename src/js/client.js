@@ -1,3 +1,10 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Title from './Title'
+import Prompt from './Prompt'
+import QuoteSection from './QuoteSection'
+import Tweet from './Tweet'
+
 var quotes = [
   "Fortune favors the bold. - British SAS",
   "The only easy day was yesterday. - US Navy SEALs",
@@ -41,7 +48,7 @@ var App = React.createClass({
   }
 });
 
-var Title = React.createClass({
+/*var Title = React.createClass({
   render: function(){
     return (
       <div id="titleDiv">
@@ -49,9 +56,9 @@ var Title = React.createClass({
       </div>
     );
   }
-});
+});*/
 
-var Prompt = React.createClass({
+/*var Prompt = React.createClass({
   handleClick: function(e){
     this.props.changeQuote();
   },
@@ -62,9 +69,9 @@ var Prompt = React.createClass({
       </div>
     );
   }
-});
+});*/
 
-var QuoteSection = React.createClass({
+/*var QuoteSection = React.createClass({
   render: function(){
     return (
       <div id="quoteBox">
@@ -72,16 +79,15 @@ var QuoteSection = React.createClass({
       </div>
     );
   }
-});
+});*/
 
-var Tweet = React.createClass({
+/*var Tweet = React.createClass({
   getInitialState: function(){
     return {
       url: "https://twitter.com/intent/tweet?text=hello"
     }
   },
   tweetQuote: function(){
-    
     this.setState({
       url:"https://twitter.com/intent/tweet?text="+ this.props.quote
     });
@@ -94,6 +100,6 @@ var Tweet = React.createClass({
       </div> 
     );
   }
-});
+});*/
 
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(<App />, document.getElementById('app'));
