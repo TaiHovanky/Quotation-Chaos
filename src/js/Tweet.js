@@ -1,6 +1,6 @@
 import React from 'react'
 
-export class Tweet extends React.Component{
+export default class Tweet extends React.Component{
   constructor(props) {
     super(props)
     this.state = {
@@ -17,7 +17,7 @@ export class Tweet extends React.Component{
     return (
       <div id="tweet">
         <a href={this.state.url} id ="tweetButton"
-        target="_blank" onClick={this.tweetQuote()}>Tweet this quote</a>
+        target="_blank" onClick={this.tweetQuote.bind(this)}>Tweet this quote</a>
       </div> 
     );
   }

@@ -5,7 +5,7 @@ const QuoteSection = ({quote}) =>{
     <div id="quoteBox">
       <p id="quoteText">{quote}</p>
     </div>
-  );
-};
+  )
+}
 
 export default QuoteSection

@@ -22,84 +22,33 @@ var quotes = [
   "I'M READY!! - Spongebob"
 ];
 
-var App = React.createClass({
-  getInitialState: function(){
-    return {
+export default class App extends React.Component{
+  constructor(props) {
+    super(props)
+    this.state = {
       quote: ""
-    };
-  },
-  changeQuote: function(){
+    }
+  }
+
+  changeQuote() {
     var number = Math.floor(Math.random()*quotes.length);
     this.setState({
       quote: quotes[number]
     });
-  },
-  render: function(){
+  }
+
+  render() {
     return (
       <div>
         <div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2 well">
           <Title />
-          <Prompt changeQuote={this.changeQuote}/>
+          <Prompt changeQuote={this.changeQuote.bind(this)}/>
           <QuoteSection quote={this.state.quote}/>
           <Tweet quote={this.state.quote}/>
         </div>
       </div>
     );
   }
-});
-
-/*var Title = React.createClass({
-  render: function(){
-    return (
-      <div id="titleDiv">
-        <h1 id="title">Quotation Chaos</h1>
-      </div>
-    );
-  }
-});*/
-
-/*var Prompt = React.createClass({
-  handleClick: function(e){
-    this.props.changeQuote();
-  },
-  render: function(){
-    return (
-      <div id="prompt">
-        <button id="quoteButton" onClick={this.handleClick}>Give me a new quote!</button>
-      </div>
-    );
-  }
-});*/
-
-/*var QuoteSection = React.createClass({
-  render: function(){
-    return (
-      <div id="quoteBox">
-        <p id="quoteText">{this.props.quote}</p>
-      </div>
-    );
-  }
-});*/
-
-/*var Tweet = React.createClass({
-  getInitialState: function(){
-    return {
-      url: "https://twitter.com/intent/tweet?text=hello"
-    }
-  },
-  tweetQuote: function(){
-    this.setState({
-      url:"https://twitter.com/intent/tweet?text="+ this.props.quote
-    });
-  },
-  render: function(){
-    return (
-      <div id="tweet">
-        <a href={this.state.url} id ="tweetButton"
-  target="_blank" onClick={this.tweetQuote}>Tweet this quote</a>
-      </div> 
-    );
-  }
-});*/
+}
 
 ReactDOM.render(<App />, document.getElementById('app'));
